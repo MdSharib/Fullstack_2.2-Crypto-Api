@@ -15,6 +15,10 @@ body {
   font-family: "Cabin", sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -136,9 +140,9 @@ input[type="text"] {
 
 #search-bar:hover,
 #search-bar:focus,
-#search-bar:active {
+#search-bar:active{
   box-shadow: hsla(210, 40%, 52%, 0.4) 2px 2px 22px;
-  border-color: var(--btn-color);
+  border-color: var(--btn-color) !important;
 }
 
 .container table {
