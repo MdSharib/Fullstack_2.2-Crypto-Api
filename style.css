@@ -1,0 +1,158 @@
+:root {
+  --text-color: hsla(210, 50%, 85%, 1);
+  --shadow-color: hsla(210, 40%, 52%, 0.4);
+  --btn-color: hsl(210, 80%, 42%);
+  --bg-color: #141218;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1a1a1c;
+  height: 100vh;
+  width: 100%;
+  font-family: "Cabin", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+#header-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+#header-img img {
+  width: 10%;
+}
+
+/*  */
+
+.search-div button {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: var(--text-color);
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px;
+  z-index: 0;
+  overflow: hidden;
+  width: 116px;
+  height: 40px;
+}
+
+button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+.right::after,
+button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 44px 28px;
+  pointer-events: none;
+}
+
+button::after {
+  font-weight: 900;
+  top: -30px;
+  left: -20px;
+}
+
+.right,
+.left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.right {
+  left: 66%;
+}
+.left {
+  right: 66%;
+}
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+
+  background-color: var(--bg-color);
+  color: transparent;
+  transition: transform 0.4s ease-out;
+  transform: translate(0, -90%) rotate(0deg);
+}
+
+button:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg);
+}
+
+button .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg);
+}
+
+button .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.search-div {
+  width: 47%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#search-bar {
+  width: 60%;
+  border: 1px solid white;
+  padding: 10px;
+}
+input[type="text"] {
+  background-color: #1a1a1c;
+  color: white;
+}
+
+#search-bar:hover,
+#search-bar:focus,
+#search-bar:active {
+  box-shadow: hsla(210, 40%, 52%, 0.4) 2px 2px 22px;
+  border-color: var(--btn-color);
+}
+
+.container table {
+  color: white;
+  border-collapse: collapse;
+}
+
+table tr {
+  border-bottom: 1px solid white;
+}
+
+table tr td {
+  padding: 12px;
+}
+img {
+  width: 27px;
+}

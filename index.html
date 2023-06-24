@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend 2 contest 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header-img">
+      <img src="./assets/image.png" alt="" />
+    </div>
+    <header>
+      <div class="search-div">
+        <input
+          type="text"
+          placeholder="search by name or symbol"
+          id="search-bar"
+        />
+        <button style="--content: 'Sort by Mkt Cap'" id="market-cap">
+          <div class="left"></div>
+
+          <div class="right"></div>
+        </button>
+        <button style="--content: 'Sort by percent'" id="percentage">
+          <div class="left"></div>
+
+          <div class="right"></div>
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <table class="table" id="table"></table>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
